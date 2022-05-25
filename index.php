@@ -13,10 +13,9 @@ class Movie{
         $this->titolo = $titolo;
         $this->genere = $genere;
         $this->poster = $poster;
-        
     }
 
-    public function setAnno($anno){
+     public function setAnno($anno){
         $this->anno = $anno;
     }
 
@@ -37,14 +36,27 @@ class Movie{
     }
 }
 
+$movies = [];
 
-$movies = [
-    new Movie ("Il Signore degli Anelli - Le due torri", "Avventura, Fantasy, Azione", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fVKewiBPcY2dQujYEsnQmQ7lfRZ.jpg"),
+
+    $movie1 = new Movie ("Il Signore degli Anelli - Le due torri", "Avventura, Fantasy, Azione", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fVKewiBPcY2dQujYEsnQmQ7lfRZ.jpg");
+    $movie1->setAnno("2003");
+    array_push($movies, $movie1);
+
+    $movie2= new Movie ("Hachiko - Il tuo migliore amico", "Dramma, Famiglia", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ag59RClKGBa60Ymbcucr73394yV.jpg");
+    $movie2->setAnno("2009");
+    array_push($movies, $movie2);
+
+    $movie3 = new Movie ("Maquia", "Animazione, Fantasy, Romance, Dramma", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/nIiW6IR2zGBZm3vUhQTWUsXbEyC.jpg");
+    $movie3->setAnno("2018");
+    array_push($movies, $movie3);
+
+    $movie4 = new Movie ("Your Name", "Romance, Animazione, Dramma
+    ", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/z26TZXh7lqrRVCIy1HXTTz3Fu2X.jpg");
+    $movie4->setAnno("2016");
+    array_push($movies, $movie4);
+  
    
-   
-   new Movie ("Hachiko - Il tuo migliore amico", "Dramma, Famiglia", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ag59RClKGBa60Ymbcucr73394yV.jpg"),
-   ];
-   var_dump($movies)
 
 ?>
 
@@ -56,11 +68,16 @@ $movies = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        .card{
+            height:600px
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="p-4 border-bottom">
-            <h1>Movie</h1>
+            <h1>Movies</h1>
         </div>
     </header>
     <main>

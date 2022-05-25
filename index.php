@@ -6,9 +6,10 @@ class Movie{
     public $anno;
     public $genere;
     
+
     //costruttore
 
-    public function __construct (String $titolo, String $genere, String $poster){
+    public function __construct ($titolo, $genere, $poster){
         $this->titolo = $titolo;
         $this->genere = $genere;
         $this->poster = $poster;
@@ -35,13 +36,14 @@ class Movie{
     }
 }
 
-$movies = [
- new Movie ("Il Signore degli Anelli - Le due torri", "Avventura, Fantasy, Azione", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fVKewiBPcY2dQujYEsnQmQ7lfRZ.jpg"),
+
+$movie1= new Movie ("Il Signore degli Anelli - Le due torri", "Avventura, Fantasy", "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/kWYfW2Re0rUDE6IHhy4CRuKWeFr.jpg");
+$movie1->setAnno("2003");
+
+$movie2= new Movie ("Hachiko - Il tuo migliore amico", "Dramma, Famiglia", "https://www.newsby.it/wp-content/uploads/2021/05/hachiko.jpg");
+$movie1->setAnno("2009");
 
 
-new Movie ("Hachiko - Il tuo migliore amico", "Dramma, Famiglia", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ag59RClKGBa60Ymbcucr73394yV.jpg"),
-];
-var_dump($movies)
 
 ?>
 
@@ -61,15 +63,16 @@ var_dump($movies)
         </div>
     </header>
     <main>
-        <div class="container my-5">
-            <div class="row row-cols-4">
-            <?php foreach ($movies as $movie): ?>
-                <div class="col"> 
-                    <?php $movie->stampa() ?>
-                   
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <?php echo $movie1->stampa() ?>
                 </div>
-                <?php endforeach ?>
+                <div class="col">
+                    <?php echo $movie2->stampa() ?>
+                </div>
             </div>
+            
             
         </div>
     </main>
